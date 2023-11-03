@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="cordova-plugin-sift-science"
-  version="0.0.2">
+  version="0.0.3">
   <name>cordova-plugin-sift-science</name>
   <license>Apache 2.0</license>
   <keywords>cordova,sift science</keywords>
@@ -53,8 +53,14 @@
     <header-file src="src/ios/SiftPlugin.h" />
     <source-file src="src/ios/SiftPlugin.m" />
 
-    <pods-config ios-min-version="8.0" use-frameworks="true">
-    </pods-config>
-    <pod id="Sift" />
+    <podspec>
+      <config>
+        <source url="https://github.com/CocoaPods/Specs.git"/>
+      </config>
+      <pods use-frameworks="true">
+        <pod name="Sift"/>
+      </pods>
+    </podspec>
+    <framework src="CoreLocation.framework" /> 
   </platform>
 </plugin>
