@@ -17,7 +17,6 @@
     Sift *sift = [Sift sharedInstance];
     [sift setAccountId:accountID];
     [sift setBeaconKey:jsSnippetKey];
-    [sift setAllowUsingMotionSensors:YES];
     [sift setUserId:userID];
   }
 
